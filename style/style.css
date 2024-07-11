@@ -6,6 +6,9 @@
     padding: 0;
     margin: 0;
 }
+html, body {
+    overscroll-behavior: none;
+}
 html {
     -webkit-text-size-adjust: 100%
 }
@@ -29,7 +32,8 @@ pre {
     font-size: 1em
 }
 a {
-    background-color: transparent
+    cursor: pointer;
+    background-color: transparent;
 }
 abbr[title] {
     border-bottom: none;
@@ -70,7 +74,10 @@ sup {
     top: -.5em
 }
 img {
-    border-style: none
+    object-fit: cover;
+    border-style: none;
+    width: 100%;
+    height: 100%;
 }
 button,
 input,
@@ -183,13 +190,22 @@ a {
 }
 
 .wrapper-inner {
-    max-width: 1499px;
+    max-width: 1539px;
+    padding: 0 20px 0;
     margin: 0 auto;
 }
 
 .hero-section {
     display: grid;
     grid-template-columns: 56.37% 43.63%;
+}
+
+.main-section {
+    padding: 40px 0 52px;
+    gap: 15px;
+    display: grid;
+    grid-template-columns: 56.37% auto;
+    justify-content: space-between;
 }
 
 .hero-woman-img {
@@ -338,6 +354,428 @@ a {
     display: none;
 }
 
+.main-section .left-part {
+    display: grid;
+    gap: 52px;
+}
+
+.top-main-block {
+    display: grid;
+    gap: 42px;
+}
+
+.bottom-main-block {
+    display: grid;
+    gap: 52px;
+}
+
+.title-main {
+    color: #25425D;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 33.6px */
+}
+
+.tip-wrap .desc-main {
+    font-weight: 500;
+}
+
+.desc-main {
+    color: #27495D;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+}
+
+.desc-main .bold {
+    font-weight: 600;
+}
+
+.desc-main .italic {
+    font-style: italic;
+}
+
+.subtitle-main {
+    color: #27495D;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 28.8px */
+}
+
+.underline {
+    text-decoration-line: underline;
+}
+
+.subtext-main {
+    color: #27495D;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 24px */
+}
+
+.info-block {
+    display: grid;
+    gap: 24px;
+}
+
+.info-block.gap-20 {
+    gap: 20px;
+}
+
+.product-image-wrap {
+    display: grid;
+    gap: 20px;
+}
+
+.history-block {
+    display: grid;
+    gap: 16px;
+}
+
+.thesis-block {
+    display: grid;
+    gap: 14px;
+}
+
+.history-end {
+    display: grid;
+    gap: 12px;
+}
+
+.thesis-line {
+    display: grid;
+    gap: 8px;
+}
+
+.selected {
+    background-color: #f6edec;
+}
+
+.numeric-list {
+    padding-left: 25px;
+    display: grid;
+    gap: 20px;
+    list-style: numeric;
+}
+
+.numeric-list.gap-0 {
+    gap: 0;
+}
+
+.bullet-list {
+    padding-left: 25px;
+    display: grid;
+    gap: 20px;
+    list-style: disc;
+}
+
+.timeline-list {
+    list-style: none;
+    display: grid;
+    gap: 40px;
+    padding-left: 12px;
+}
+.timeline-list li {
+    padding-left: 16px;
+    position: relative;
+}
+.timeline-list li:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #EC8AAE;
+    position: absolute;
+    z-index: 2;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-40%);
+}
+
+.timeline-list li:not(:last-child):after {
+    z-index: 1;
+    content: '';
+    width: 2px;
+    height: 70px;
+    background: #f6f1f1;
+    position: absolute;
+    left: -8px;
+    top: 50%;
+}
+
+.timeline-list.history {
+    gap: 32px;
+}
+
+.timeline-list.history li:before {
+    width: 16px;
+    height: 16px;
+}
+
+.timeline-list.history li:first-of-type:before {
+    background: #f9dce6;
+}
+
+.timeline-list.history li:last-of-type:before {
+    background: #EB8AAE;
+}
+
+.timeline-list.history li:before {
+    background: #f9dce6;
+}
+
+.timeline-list.history li:not(:last-child):after {
+    width: 1px;
+    height: 24px;
+    background: #EB8AAE;
+    left: -4px;
+    top: 32px;
+}
+
+.image-product {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.card-author {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 24px;
+}
+
+.author-right-part {
+    display: grid;
+    gap: 12px;
+}
+
+.avatar-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+}
+
+.tip-image {
+    color: #7C8E9E;
+    text-align: center;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+}
+
+.link-main {
+    cursor: pointer;
+    text-decoration-line: underline;
+    color: #27495D;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+}
+
+.desc-author {
+    color: #7C8E9E;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+}
+
+.history-text {
+    color: #25425D;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+
+.history-tag {
+    color: rgba(39, 73, 93, 0.60);
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.history-tag.underline {
+    color: #27495D;
+    text-decoration-line: underline;
+}
+
+.quote-wrap {
+    gap: 25px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 32px;
+    border-radius: 20px;
+    background: #FBF8F7;
+}
+
+.pink-line {
+    width: 2px;
+    height: 100%;
+    background: #EC8AAE;
+    border: none;
+}
+
+.right-part-quote {
+    display: grid;
+    align-content: center;
+    gap: 32px;
+}
+
+.quote-speech {
+    color: #25425D;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 120%; /* 24px */
+}
+
+.author-name {
+    color: #7C8E9E;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 22.4px */
+}
+
+.product-wrap {
+    display: grid;
+    grid-template-columns: 58.36% 41.64%;
+    border-radius: 20px;
+    background: #FBF8F7;
+}
+
+.left-part-product {
+    padding: 42px 52px;
+}
+
+.product-right-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.star-block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.star-wrap {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: start;
+    align-items: center;
+}
+
+.star-img {
+    cursor: pointer;
+    max-width: 12px;
+    transition: all ease-in-out 0.3s;
+}
+
+.star-img.hovered {
+    filter: contrast(40%) invert(9%) sepia(90%);
+}
+
+.rating-star {
+    color: rgba(37, 66, 93, 0.50);
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 11.484px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 14px; /* 121.905% */
+}
+
+.desc-product {
+    color: rgba(37, 66, 93, 0.50);
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.price-product {
+    color: rgba(37, 66, 93, 0.50);
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.shop-button {
+    cursor: pointer;
+    color: #25425D;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23.4px; /* 146.25% */
+
+    border-bottom: 1px solid rgba(37, 66, 93, 0.50);
+}
+
+.star-block {
+    padding: 6px 0 16px;
+}
+
+.price-product {
+    padding: 13px 0 15px;
+}
+
+.tip-wrap {
+    display: grid;
+    padding: 32px;
+    gap: 14px;
+    border-radius: 20px;
+    background: #FBF8F7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1280px) {
 
     .big-text-hero {
@@ -345,7 +783,6 @@ a {
     }
 
 }
-
 
 @media (max-width: 1225px) {
 
@@ -369,8 +806,43 @@ a {
 
 @media (max-width: 1015px) {
 
+    .wrapper-inner {
+        max-width: 1499px;
+        padding: 0;
+    }
+
     .hero-section {
         grid-template-columns: auto;
+    }
+
+    .main-section {
+        padding: 24px 0;
+        gap: unset;
+        grid-template-columns: auto;
+        justify-content: unset;
+    }
+
+    .product-wrap {
+        grid-template-columns: auto;
+        border-radius: 20px;
+    }
+
+    .product-right-image {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 0;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .left-part-product {
+        padding: 16px 24px 24px 24px;
+        margin: 0 auto;
+        max-width: 343px;
+    }
+
+    .main-section {
+        padding: 40px 16px 52px;
     }
 
     .icon-block {
@@ -442,9 +914,81 @@ a {
         left: 0;
     }
 
+    .title-main {
+        font-size: 24px;
+    }
+
+    .desc-main {
+        font-size: 16px;
+    }
+
+    .subtitle-main {
+        font-size: 20px;
+    }
+
+    .subtext-main {
+        font-size: 18px;
+    }
+
+    .quote-speech {
+        font-size: 18px;
+    }
+
+    .author-name {
+        font-size: 14px;
+    }
+
+    .right-part-quote {
+        gap: 24px;
+    }
+
+    .quote-wrap {
+        padding: 24px;
+    }
+
+    .product-wrap .subtitle-main {
+        font-size: 24px;
+    }
+
+    .desc-product {
+        font-size: 14px;
+    }
+
+    .price-product {
+        font-size: 14px;
+    }
+
+    .image-product {
+        height: 340px;
+    }
+
+    .tip-image {
+        font-size: 12px;
+    }
+
+    .link-main {
+        font-size: 16px;
+    }
+
+    .avatar-circle {
+        width: 78px;
+        height: 78px;
+        border-radius: 78px;
+    }
+
+    .top-main-block {
+        gap: 32px;
+    }
+
+    .bottom-main-block {
+        gap: 32px;
+    }
+
+    .info-block {
+        display: grid;
+        gap: 20px;
+    }
+
 }
-
-
-
 
 /* CUSTOM STYLES END */
