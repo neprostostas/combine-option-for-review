@@ -102,7 +102,9 @@ select {
 [type=reset],
 [type=submit],
 button {
-    -webkit-appearance: button
+    -webkit-appearance: button;
+    cursor: pointer;
+    border: none;
 }
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
@@ -205,6 +207,7 @@ a {
     gap: 15px;
     display: grid;
     grid-template-columns: 56.37% auto;
+    align-items: start;
     justify-content: space-between;
 }
 
@@ -357,6 +360,13 @@ a {
 .main-section .left-part {
     display: grid;
     gap: 52px;
+}
+
+.main-section .right-part {
+    display: grid;
+    gap: 24px;
+    position: sticky;
+    top: 40px;
 }
 
 .top-main-block {
@@ -754,11 +764,169 @@ a {
     background: #FBF8F7;
 }
 
+.table-contents {
+    border-radius: 20px;
+    border: 0.5px solid #27495D;
+    padding: 32px;
+    width: 100%;
+    min-width: 362px;
+}
 
+.main-title-content {
+    padding-bottom: 20px;
+    color: #27495D;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 36px */
+}
 
+.main-title-content.pb-0 {
+    padding-bottom: 0;
+}
 
+.share-line {
+    display: flex;
+    padding: 22px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 20px;
+    border: 0.5px solid #27495D;
+}
 
+.social-networks {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
 
+.social-network-ico {
+    cursor: pointer;
+}
+
+.pack-product {
+    display: grid;
+    padding: 0 24px 32px 24px;
+    gap: 19px;
+    border-radius: 20px;
+    background: #FBF8F7;
+}
+
+.wrap-pack-product-image {
+    margin: 0 auto;
+}
+
+.pack-product-image {
+    width: 181px;
+    height: 230px;
+}
+
+.pack-product-name {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 262px;
+    color: #25425D;
+    text-align: center;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.pack-product-desc {
+    padding: 12px 0 24px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 251px;
+    color: #7C8E9E;
+    text-align: center;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.button-autoship {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    background: #54B7AB;
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    color: #FFF;
+    text-align: center;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.tags-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tags-wrapper .tag {
+    cursor: pointer;
+    color: #7C8E9E;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+    padding: 4px 12px;
+    border-radius: 18px;
+    border: 1px solid #7C8E9E;
+    transition: .3s all ease-in-out;
+}
+
+.tags-wrapper .tag:hover {
+    transition: .3s all ease-in-out;
+    background: #FBF8F7;
+}
+
+.proposition-block.mobile {
+    display: none;
+    gap: 24px;
+}
+
+.table-contents-list {
+    display: grid;
+    gap: 16px;
+    list-style-type: numeric;
+    margin-left: 15px;
+}
+
+.table-content-point {
+    color: #68808E;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+}
+
+.table-content-point.pass {
+    color: #27495D;
+}
+
+.table-content-point:hover {
+    cursor: pointer;
+    color: #27495D;
+}
 
 
 
@@ -820,6 +988,10 @@ a {
         gap: unset;
         grid-template-columns: auto;
         justify-content: unset;
+    }
+
+    .main-section .right-part {
+        display: none;
     }
 
     .product-wrap {
@@ -897,7 +1069,6 @@ a {
         left: 0;
         top: -40px;
         transform: unset;
-
         width: 24px;
         height: 24px;
         border-radius: 24px;
@@ -987,6 +1158,10 @@ a {
     .info-block {
         display: grid;
         gap: 20px;
+    }
+
+    .proposition-block.mobile {
+        display: grid;
     }
 
 }
